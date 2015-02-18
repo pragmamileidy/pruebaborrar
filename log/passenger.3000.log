@@ -1,0 +1,32 @@
+[ 2015-01-07 17:48:04.4756 953/7f8a712cc740 agents/Watchdog/Main.cpp:1220 ]: Starting PassengerAgent watchdog...
+[ 2015-01-07 17:48:04.4814 956/7f7f2963f740 agents/HelperAgent/Main.cpp:881 ]: Starting PassengerAgent server...
+[ 2015-01-07 17:48:04.4816 956/7f7f2963f740 agents/HelperAgent/Main.cpp:254 ]: PassengerAgent server running in single-application mode.
+[ 2015-01-07 17:48:04.4816 956/7f7f2963f740 agents/HelperAgent/Main.cpp:255 ]: Serving app     : /home/pragmarafael/pagos
+[ 2015-01-07 17:48:04.4816 956/7f7f2963f740 agents/HelperAgent/Main.cpp:256 ]: App type        : rack
+[ 2015-01-07 17:48:04.4816 956/7f7f2963f740 agents/HelperAgent/Main.cpp:257 ]: App startup file: config.ru
+[ 2015-01-07 17:48:04.4837 956/7f7f2963f740 agents/HelperAgent/Main.cpp:635 ]: PassengerAgent server online, PID 956
+[ 2015-01-07 17:48:04.4897 963/7fbdd9a35740 agents/LoggingAgent/Main.cpp:431 ]: Starting PassengerAgent logger...
+[ 2015-01-07 17:48:04.4901 963/7fbdd9a35740 agents/LoggingAgent/Main.cpp:312 ]: PassengerAgent logger online, PID 963
+App 1585 stdout: 
+App 1585 stderr: [Simple Form] Simple Form is not configured in the application and will use the default values. Use `rails generate simple_form:install` to generate the Simple Form configuration.
+App 1585 stderr: 
+App 1603 stdout: 
+
+
+[ 2015-01-08 11:26:20.4444 956/7f7f237fe700 agents/HelperAgent/Main.cpp:447 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-01-08 11:26:20.4444 963/7fbdd3fff700 agents/LoggingAgent/Main.cpp:338 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-01-08 11:26:20.4445 963/7fbdd9a35740 agents/LoggingAgent/Main.cpp:400 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-01-08 11:26:20.4971 956/7f7f2963f740 agents/HelperAgent/Main.cpp:804 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-01-08 11:26:20.4971 956/7f7f2963f740 agents/HelperAgent/Main.cpp:722 ]: Disconnecting long-running connections for process 1603, application /home/pragmarafael/pagos#default
+[ 2015-01-08 11:26:20.5623 956/7f7f217fa700 ServerKit/Server.h:453 ]: [AdminServer] Shutdown finished
+[ 2015-01-08 11:26:20.4973 956/7f7f227fc700 ServerKit/Server.h:453 ]: [ServerThr.3] Shutdown finished
+[ 2015-01-08 11:26:20.4972 956/7f7f21ffb700 ServerKit/Server.h:453 ]: [ServerThr.4] Shutdown finished
+[ 2015-01-08 11:26:20.4972 956/7f7f22ffd700 ServerKit/Server.h:453 ]: [ServerThr.2] Shutdown finished
+[ 2015-01-08 11:26:20.4972 956/7f7f237fe700 ServerKit/Server.h:453 ]: [ServerThr.1] Shutdown finished
+[ 2015-01-08 11:26:20.5631 963/7fbdd3fff700 ServerKit/Server.h:453 ]: [LoggerAdminServer] Shutdown finished
+[ 2015-01-08 11:26:20.5636 963/7fbdd9a35740 agents/LoggingAgent/Main.cpp:425 ]: PassengerAgent logger shutdown finished
+[ 2015-01-08 11:26:20.6665 956/7f7f2963f740 agents/HelperAgent/Main.cpp:722 ]: Disconnecting long-running connections for process 1603, application /home/pragmarafael/pagos#default
+
+[ 2015-01-08 11:26:20.8232 956/7f7f237fe700 agents/HelperAgent/Main.cpp:447 ]: Signal received. Gracefully shutting down... (send signal 1 more time(s) to force shutdown)
+[ 2015-01-08 11:26:21.7289 956/7f7f2963f740 agents/HelperAgent/Main.cpp:866 ]: PassengerAgent server shutdown finished
+[ 2015-01-08 11:26:21.7568 22019/7f8a712cc740 agents/Watchdog/Main.cpp:345 ]: Cannot open cleanup PID file /tmp/passenger-standalone.1ggnfqh/temp_dir_toucher.pid

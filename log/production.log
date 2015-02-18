@@ -1,0 +1,324 @@
+I, [2014-12-18T16:28:27.500476 #7562]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-12-18 16:28:27 -0430
+F, [2014-12-18T16:28:27.568277 #7562] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/"):
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/application.rb:144:in `call'
+  passenger (4.0.56) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.56) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.56) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.56) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-12-18T16:29:01.325882 #7562]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-12-18 16:29:01 -0430
+F, [2014-12-18T16:29:01.327485 #7562] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/"):
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/application.rb:144:in `call'
+  passenger (4.0.56) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.56) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.56) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.56) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-12-18T16:29:31.069141 #7562]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-12-18 16:29:31 -0430
+F, [2014-12-18T16:29:31.070024 #7562] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/"):
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  vendor/bundle/gems/activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  vendor/bundle/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  vendor/bundle/gems/railties-4.1.6/lib/rails/application.rb:144:in `call'
+  passenger (4.0.56) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.56) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.56) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.56) lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads'
+
+
+I, [2014-12-18T16:37:49.299958 #8481]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-12-18 16:37:49 -0430
+I, [2014-12-18T16:37:49.313488 #8481]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2014-12-18T16:37:49.339397 #8481]  INFO -- : Completed 500 Internal Server Error in 26ms
+F, [2014-12-18T16:37:49.340506 #8481] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:17:in `new'
+
+
+I, [2014-12-19T11:37:10.023297 #8744]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-12-19 11:37:10 -0430
+I, [2014-12-19T11:37:10.074664 #8744]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2014-12-19T11:37:10.087150 #8744]  INFO -- : Completed 500 Internal Server Error in 12ms
+F, [2014-12-19T11:37:10.088132 #8744] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:17:in `new'
+
+
+I, [2014-12-19T11:45:10.110068 #9645]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-12-19 11:45:10 -0430
+I, [2014-12-19T11:45:10.119632 #9645]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2014-12-19T11:45:10.133324 #9645]  INFO -- : Completed 500 Internal Server Error in 14ms
+F, [2014-12-19T11:45:10.134449 #9645] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:17:in `new'
+
+
+I, [2014-12-19T11:45:48.251770 #9645]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-12-19 11:45:48 -0430
+I, [2014-12-19T11:45:48.252807 #9645]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2014-12-19T11:45:48.253677 #9645]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-12-19T11:45:48.254665 #9645] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:17:in `new'
+
+
+I, [2015-01-07T14:39:10.117146 #9711]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:39:10 -0430
+I, [2015-01-07T14:39:10.140735 #9711]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:39:10.154767 #9711]  INFO -- : Completed 500 Internal Server Error in 14ms
+F, [2015-01-07T14:39:10.155854 #9711] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T14:39:13.076036 #9711]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:39:13 -0430
+I, [2015-01-07T14:39:13.077044 #9711]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:39:13.078536 #9711]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T14:39:13.080378 #9711] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T14:39:15.977192 #9711]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:39:15 -0430
+I, [2015-01-07T14:39:15.977864 #9711]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:39:15.978585 #9711]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T14:39:15.979477 #9711] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T14:39:42.854567 #9711]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:39:42 -0430
+I, [2015-01-07T14:39:42.866339 #9711]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:39:42 -0430
+I, [2015-01-07T14:39:42.867162 #9711]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:39:42.867934 #9711]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T14:39:42.868775 #9711] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T14:40:16.949911 #10049]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:40:16 -0430
+I, [2015-01-07T14:40:16.965493 #10049]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:40:16.978469 #10049]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2015-01-07T14:40:16.979509 #10049] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T14:40:25.848510 #10049]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:40:25 -0430
+I, [2015-01-07T14:40:25.849453 #10049]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:40:25.850244 #10049]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T14:40:25.851177 #10049] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T14:40:42.783573 #10049]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:40:42 -0430
+I, [2015-01-07T14:40:42.789801 #10049]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:40:42 -0430
+I, [2015-01-07T14:40:42.790492 #10049]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:40:42.791222 #10049]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T14:40:42.792120 #10049] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T14:41:25.862568 #10049]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:41:25 -0430
+I, [2015-01-07T14:41:25.875548 #10049]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:41:25 -0430
+I, [2015-01-07T14:41:25.876265 #10049]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:41:25.877019 #10049]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T14:41:25.877847 #10049] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T14:41:38.114178 #10049]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:41:38 -0430
+I, [2015-01-07T14:41:38.127833 #10049]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 14:41:38 -0430
+I, [2015-01-07T14:41:38.128496 #10049]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T14:41:38.129249 #10049]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T14:41:38.130152 #10049] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T17:36:22.583314 #380]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 17:36:22 -0430
+I, [2015-01-07T17:36:22.744845 #380]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T17:36:22.758334 #380]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2015-01-07T17:36:22.770010 #380] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T17:54:01.687882 #1727]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 17:54:01 -0430
+I, [2015-01-07T17:54:01.697194 #1727]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T17:54:01.710989 #1727]  INFO -- : Completed 500 Internal Server Error in 14ms
+F, [2015-01-07T17:54:01.712132 #1727] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T17:54:27.585631 #1727]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 17:54:27 -0430
+I, [2015-01-07T17:54:27.587099 #1727]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T17:54:27.588371 #1727]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T17:54:27.589956 #1727] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T17:54:37.681622 #1727]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 17:54:37 -0430
+I, [2015-01-07T17:54:37.682758 #1727]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T17:54:37.684932 #1727]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2015-01-07T17:54:37.686267 #1727] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T17:54:54.116084 #1727]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 17:54:54 -0430
+I, [2015-01-07T17:54:54.116777 #1727]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T17:54:54.117963 #1727]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T17:54:54.119574 #1727] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T17:57:02.159999 #1727]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 17:57:02 -0430
+I, [2015-01-07T17:57:02.160623 #1727]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T17:57:02.161240 #1727]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-07T17:57:02.161978 #1727] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-07T18:03:12.813150 #2751]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-07 18:03:12 -0430
+I, [2015-01-07T18:03:12.825495 #2751]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-07T18:03:12.838679 #2751]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2015-01-07T18:03:12.839699 #2751] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T08:30:46.941251 #2751]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 08:30:46 -0430
+I, [2015-01-08T08:30:47.008975 #2751]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T08:30:47.009965 #2751]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-08T08:30:47.010935 #2751] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T08:32:45.196062 #6589]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 08:32:45 -0430
+I, [2015-01-08T08:32:45.248628 #6589]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T08:32:45.261565 #6589]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2015-01-08T08:32:45.262607 #6589] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T08:46:35.157759 #7612]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 08:46:35 -0430
+I, [2015-01-08T08:46:35.169742 #7612]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T08:46:35.183433 #7612]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2015-01-08T08:46:35.184560 #7612] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T09:08:27.631005 #7612]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 09:08:27 -0430
+I, [2015-01-08T09:08:27.632010 #7612]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T09:08:27.632847 #7612]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-08T09:08:27.633721 #7612] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T09:09:24.908244 #7612]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 09:09:24 -0430
+I, [2015-01-08T09:09:24.908936 #7612]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T09:09:24.909237 #7612]  INFO -- : Filter chain halted as :authenticate rendered or redirected
+I, [2015-01-08T09:09:24.909355 #7612]  INFO -- : Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+I, [2015-01-08T09:09:32.523647 #7612]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 09:09:32 -0430
+I, [2015-01-08T09:09:32.524749 #7612]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T09:09:32.525741 #7612]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-08T09:09:32.527255 #7612] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T09:10:31.916366 #7612]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 09:10:31 -0430
+I, [2015-01-08T09:10:31.917352 #7612]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T09:10:31.918113 #7612]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-08T09:10:31.919087 #7612] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T09:11:24.849486 #10062]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 09:11:24 -0430
+I, [2015-01-08T09:11:24.877199 #10062]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T09:11:24.890211 #10062]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2015-01-08T09:11:24.891210 #10062] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T09:52:59.914849 #10062]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 09:52:59 -0430
+I, [2015-01-08T09:52:59.915989 #10062]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T09:52:59.916470 #10062]  INFO -- : Filter chain halted as :authenticate rendered or redirected
+I, [2015-01-08T09:52:59.916602 #10062]  INFO -- : Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+I, [2015-01-08T09:53:04.950070 #10062]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 09:53:04 -0430
+I, [2015-01-08T09:53:04.950725 #10062]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T09:53:04.951339 #10062]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2015-01-08T09:53:04.952162 #10062] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T09:55:52.532441 #14109]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 09:55:52 -0430
+I, [2015-01-08T09:55:52.557362 #14109]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T09:55:52.576182 #14109]  INFO -- : Completed 500 Internal Server Error in 19ms
+F, [2015-01-08T09:55:52.577330 #14109] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+
+I, [2015-01-08T10:03:04.627554 #14814]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 10:03:04 -0430
+I, [2015-01-08T10:03:04.642745 #14814]  INFO -- : Processing by PaymentsController#new as HTML
+I, [2015-01-08T10:03:04.655911 #14814]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2015-01-08T10:03:04.656930 #14814] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'payments'):
+  app/controllers/payments_controller.rb:20:in `new'
+
+

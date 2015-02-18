@@ -1,0 +1,11 @@
+  <%= f.fields_for :cards do |card| %>
+    <%= card.collection_radio_buttons :options, [['Visa', 'Visa'] ,['Master', 'Master']], :first, :last,
+    :input_html => {:onClick => 'obtenerValor(this);'}  %>
+    <%= card.input :number, label: 'Número de Tarjeta', placeholder: '4444-4444-4444-4444', disabled: true,
+    :input_html => {:onBlur => 'validateCard(this);'} %>
+     <span id="payment_cards_number_error"> </span>
+    <%= card.input :date_expired, label: 'Fecha de Expiración', as: :date, start_year: Date.today.year , disabled: true,
+                              end_year: Date.today.year + 10, discard_day: true, :add_month_numbers => true, 
+                              order: [:month, :year], :date_separator => " / "%>
+    <%= card.input :code, label: 'Código de Seguridad', placeholder: '000', disabled: true %>
+  <% end %>

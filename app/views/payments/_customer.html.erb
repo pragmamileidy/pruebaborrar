@@ -1,0 +1,4 @@
+  <%= f.fields_for :customers do |customer| %>
+    <%= render 'card', :f => f %>
+    <%= customer.input :name, label: 'Nombre', placeholder: 'name'%>
+  <% end %>
