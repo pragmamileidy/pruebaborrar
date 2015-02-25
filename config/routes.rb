@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :payments do
     get :validate_card, on: :collection
+    get :validate_customer, on: :collection
+    get :validate_fecha, on: :collection
   end 
-
+  wash_out :merchants
   resources :merchants
 
   resources :customers

@@ -1,4 +1,5 @@
   <%= f.fields_for :customers do |customer| %>
     <%= render 'card', :f => f %>
-    <%= customer.input :name, label: 'Nombre', placeholder: 'name'%>
+    <%= customer.input :identification, label: 'Número de Identificación', placeholder: '15852333'%>
+    <%= customer.input :name, label: 'Nombre del Cliente', placeholder: 'name'%>
   <% end %>

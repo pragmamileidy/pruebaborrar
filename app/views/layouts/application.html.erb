@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pasarela</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="head">
+    <h1>Pasarela de Pagos</h1>      
+    <p>Pagos en Linea</p>
+  </div>
+  <div class = "content-center">
+    <%= yield %>
+  </div>
 </body>
+ <%= render :partial => "layouts/footer" %>
 </html>

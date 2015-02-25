@@ -22736,3 +22736,577 @@ Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
   [1m[36mMerchant Load (0.3ms)[0m  [1mSELECT  "merchants".* FROM "merchants"   ORDER BY "merchants"."id" ASC LIMIT 1[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIdentificationToCustomers (20150219215250)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_card_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_card_id' AND type='index'
+
+  [1m[36m (16.4ms)[0m  [1mCREATE UNIQUE INDEX "index_customers_on_identification" ON "customers" ("identification")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150219215250"]]
+  [1m[36m (143.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddStatusToPayments (20150219215839)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "payments" ADD "status" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150219215839"]]
+  [1m[36m (134.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddTokenToMerchants (20150225201255)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "merchants" ADD "token" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150225201255"]]
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_identification' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_identification' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_card_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_card_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_payments_on_customer_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_payments_on_customer_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_payments_on_merchant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_payments_on_merchant_id' AND type='index'
+
+
+
+Started GET "/merchants/wsdl" for 127.0.0.1 at 2015-02-25 16:34:24 -0430
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MerchantsController#_generate_wsdl as */*
+  Rendered vendor/bundle/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (6.8ms)
+Completed 200 OK in 57ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/merchants/action" for 127.0.0.1 at 2015-02-25 16:34:24 -0430
+Processing by MerchantsController#concat as */*
+  Rendered vendor/bundle/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.5ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/merchants/wsdl" for 127.0.0.1 at 2015-02-25 16:35:01 -0430
+Processing by MerchantsController#_generate_wsdl as */*
+  Rendered vendor/bundle/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.0ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/merchants/action" for 127.0.0.1 at 2015-02-25 16:35:01 -0430
+Processing by MerchantsController#make_payment as */*
+  [1m[35mPayment Load (0.2ms)[0m  SELECT  "payments".* FROM "payments"   ORDER BY "payments"."id" ASC LIMIT 1
+  Rendered vendor/bundle/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.3ms)
+Completed 200 OK in 37ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/merchants/wsdl" for 127.0.0.1 at 2015-02-25 16:37:40 -0430
+Processing by MerchantsController#_generate_wsdl as */*
+  Rendered vendor/bundle/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.2ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/merchants/action" for 127.0.0.1 at 2015-02-25 16:37:40 -0430
+Processing by MerchantsController#make_payment as */*
+  [1m[36mPayment Load (0.2ms)[0m  [1mSELECT  "payments".* FROM "payments"   ORDER BY "payments"."id" ASC LIMIT 1[0m
+  Rendered vendor/bundle/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.3ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/payments/new" for 127.0.0.1 at 2015-02-25 16:37:49 -0430
+Processing by PaymentsController#new as HTML
+  Rendered payments/_merchant.html.erb (0.3ms)
+  Rendered payments/_card.html.erb (70.8ms)
+  Rendered payments/_customer.html.erb (74.4ms)
+  Rendered payments/_form.html.erb (308.2ms)
+  Rendered payments/new.html.erb within layouts/application (364.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 2585ms (Views: 2584.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/wizard.css?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-25 16:37:51 -0430
+
+
+Started GET "/assets/tarjeta_pago.jpg" for 127.0.0.1 at 2015-02-25 16:37:52 -0430
+
+
+Started GET "/payments/validate_card?codigo=202&numero=4444444444444444" for 127.0.0.1 at 2015-02-25 16:38:25 -0430
+Processing by PaymentsController#validate_card as JSON
+  Parameters: {"codigo"=>"202", "numero"=>"4444444444444444"}
+codigo: 202, numero: 4444444444444444
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."code" = 202 AND "cards"."number" = 4444444444444444 LIMIT 1
+este es el resultado de validar tarjeta #<Card:0x007f0ee19b3470>
+Completed 200 OK in 50ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/payments/validate_customer?numero=20114200&name=Mileidy" for 127.0.0.1 at 2015-02-25 16:38:25 -0430
+Processing by PaymentsController#validate_customer as JSON
+  Parameters: {"numero"=>"20114200", "name"=>"Mileidy"}
+LLEGANDO AL METODO VALIDAR CLIENTE
+numero: 20114200
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."identification" = '20114200' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "customers" ("created_at", "identification", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-25 21:08:25.827104"], ["identification", "20114200"], ["updated_at", "2015-02-25 21:08:25.827104"]]
+  [1m[35m (137.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "customers" SET "name" = ?, "updated_at" = ? WHERE "customers"."id" = 1  [["name", "Mileidy"], ["updated_at", "2015-02-25 21:08:25.982616"]]
+  [1m[36m (115.5ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 316ms (Views: 0.2ms | ActiveRecord: 254.6ms)
+
+
+Started GET "/payments/validate_fecha?numero=4444444444444444&fecha=02%2F2015" for 127.0.0.1 at 2015-02-25 16:38:26 -0430
+Processing by PaymentsController#validate_fecha as JSON
+  Parameters: {"numero"=>"4444444444444444", "fecha"=>"02/2015"}
+numero: 4444444444444444, fecha: 02/2015
+  [1m[35mCard Load (0.1ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."number" = 4444444444444444 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `strftime' for nil:NilClass):
+  app/models/card.rb:12:in `validate_fecha'
+  app/controllers/payments_controller.rb:86:in `validate_fecha'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (10.0ms)
+
+
+Started GET "/payments/validate_card?codigo=202&numero=4444444444444444" for 127.0.0.1 at 2015-02-25 16:38:31 -0430
+Processing by PaymentsController#validate_card as JSON
+  Parameters: {"codigo"=>"202", "numero"=>"4444444444444444"}
+codigo: 202, numero: 4444444444444444
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."code" = 202 AND "cards"."number" = 4444444444444444 LIMIT 1[0m
+este es el resultado de validar tarjeta #<Card:0x007f0ee1d76f80>
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/payments/validate_fecha?numero=4444444444444444&fecha=02%2F2018" for 127.0.0.1 at 2015-02-25 16:38:31 -0430
+Processing by PaymentsController#validate_fecha as JSON
+  Parameters: {"numero"=>"4444444444444444", "fecha"=>"02/2018"}
+numero: 4444444444444444, fecha: 02/2018
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."number" = 4444444444444444 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `strftime' for nil:NilClass):
+  app/models/card.rb:12:in `validate_fecha'
+  app/controllers/payments_controller.rb:86:in `validate_fecha'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (9.8ms)
+
+
+Started GET "/payments/validate_customer?numero=20114200&name=Mileidy" for 127.0.0.1 at 2015-02-25 16:38:31 -0430
+Processing by PaymentsController#validate_customer as JSON
+  Parameters: {"numero"=>"20114200", "name"=>"Mileidy"}
+LLEGANDO AL METODO VALIDAR CLIENTE
+numero: 20114200
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."identification" = '20114200' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."number" = 4444444444444444 LIMIT 1[0m
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"   ORDER BY "cards"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "cards" SET "date_expired" = ?, "updated_at" = ? WHERE "cards"."id" = 1  [["date_expired", "2018-02-02"], ["updated_at", "2015-02-25 21:11:45.999447"]]
+  [1m[36m (174.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards"   ORDER BY "cards"."id" ASC LIMIT 1
+  [1m[36mPayment Load (0.3ms)[0m  [1mSELECT "payments".* FROM "payments"[0m
+  [1m[35mMerchant Load (0.3ms)[0m  SELECT "merchants".* FROM "merchants"
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+
+
+Started GET "/payments/new" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+Processing by PaymentsController#new as HTML
+  Rendered payments/_merchant.html.erb (0.0ms)
+  Rendered payments/_card.html.erb (5.8ms)
+  Rendered payments/_customer.html.erb (11.5ms)
+  Rendered payments/_form.html.erb (16.4ms)
+  Rendered payments/new.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/wizard.css?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-25 16:42:38 -0430
+
+
+Started GET "/payments/validate_card?codigo=202&numero=4444444444444444" for 127.0.0.1 at 2015-02-25 16:42:48 -0430
+Processing by PaymentsController#validate_card as JSON
+  Parameters: {"codigo"=>"202", "numero"=>"4444444444444444"}
+codigo: 202, numero: 4444444444444444
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."code" = 202 AND "cards"."number" = 4444444444444444 LIMIT 1
+este es el resultado de validar tarjeta #<Card:0x007f0eccc7c978>
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/payments/validate_fecha?numero=4444444444444444&fecha=02%2F2015" for 127.0.0.1 at 2015-02-25 16:42:48 -0430
+Processing by PaymentsController#validate_fecha as JSON
+  Parameters: {"numero"=>"4444444444444444", "fecha"=>"02/2015"}
+numero: 4444444444444444, fecha: 02/2015
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."number" = 4444444444444444 LIMIT 1[0m
+fecha de tarjeta ["02", "2018"]
+fecha de tarjeta actualizada  02/2018 y 02/2015
+este es el resultado de validar fecha false
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/payments/validate_customer?numero=20114200&name=Mileidy" for 127.0.0.1 at 2015-02-25 16:42:48 -0430
+Processing by PaymentsController#validate_customer as JSON
+  Parameters: {"numero"=>"20114200", "name"=>"Mileidy"}
+LLEGANDO AL METODO VALIDAR CLIENTE
+numero: 20114200
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."identification" = '20114200' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/payments/validate_card?codigo=202&numero=4444444444444444" for 127.0.0.1 at 2015-02-25 16:42:53 -0430
+Processing by PaymentsController#validate_card as JSON
+  Parameters: {"codigo"=>"202", "numero"=>"4444444444444444"}
+codigo: 202, numero: 4444444444444444
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."code" = 202 AND "cards"."number" = 4444444444444444 LIMIT 1[0m
+este es el resultado de validar tarjeta #<Card:0x007f0ecccfb868>
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/payments/validate_customer?numero=20114200&name=Mileidy" for 127.0.0.1 at 2015-02-25 16:42:53 -0430
+Processing by PaymentsController#validate_customer as JSON
+  Parameters: {"numero"=>"20114200", "name"=>"Mileidy"}
+LLEGANDO AL METODO VALIDAR CLIENTE
+numero: 20114200
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."identification" = '20114200' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/payments/validate_fecha?numero=4444444444444444&fecha=02%2F2018" for 127.0.0.1 at 2015-02-25 16:42:53 -0430
+Processing by PaymentsController#validate_fecha as JSON
+  Parameters: {"numero"=>"4444444444444444", "fecha"=>"02/2018"}
+numero: 4444444444444444, fecha: 02/2018
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."number" = 4444444444444444 LIMIT 1[0m
+fecha de tarjeta ["02", "2018"]
+fecha de tarjeta actualizada  02/2018 y 02/2018
+este es el resultado de validar fecha true
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/payments" for 127.0.0.1 at 2015-02-25 16:42:59 -0430
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KDIdoDy3E+FJpkkMZSYaVdkDFX5f3W30OG687dL+aEU=", "payment"=>{"amount"=>"3543", "customer_id"=>"1", "cards"=>{"options"=>"Visa", "number"=>"4444-4444-4444-4444", "date_expired(3i)"=>"", "date_expired(2i)"=>"2", "date_expired(1i)"=>"2018", "code"=>"202"}, "customers"=>{"identification"=>"20114200", "name"=>"Mileidy"}}, "commit"=>"Create Payment"}
+Unpermitted parameters: cards, customers
+{"id"=>nil, "amount"=>3543.0, "description"=>nil, "created_at"=>nil, "updated_at"=>nil, "merchant_id"=>nil, "customer_id"=>1, "status"=>nil}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "payments" ("amount", "created_at", "customer_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["amount", 3543.0], ["created_at", "2015-02-25 21:12:59.833714"], ["customer_id", 1], ["updated_at", "2015-02-25 21:12:59.833714"]]
+  [1m[35m (185.9ms)[0m  commit transaction
+  [1m[36mMerchant Load (0.2ms)[0m  [1mSELECT  "merchants".* FROM "merchants"   ORDER BY "merchants"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "payments" SET "merchant_id" = ?, "status" = ?, "updated_at" = ? WHERE "payments"."id" = 6[0m  [["merchant_id", 1], ["status", "OK"], ["updated_at", "2015-02-25 21:13:00.037790"]]
+  [1m[35m (116.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/payments/6
+Completed 302 Found in 325ms (ActiveRecord: 303.2ms)
+
+
+Started GET "/payments/6" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+Processing by PaymentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPayment Load (0.3ms)[0m  [1mSELECT  "payments".* FROM "payments"  WHERE "payments"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered payments/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 108.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/wizard.css?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:00 -0430
+  [1m[35mPayment Load (0.3ms)[0m  SELECT  "payments".* FROM "payments"   ORDER BY "payments"."id" DESC LIMIT 1
+
+
+Started GET "/payments/new" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+Processing by PaymentsController#new as HTML
+  Rendered payments/_merchant.html.erb (0.0ms)
+  Rendered payments/_card.html.erb (48.2ms)
+  Rendered payments/_customer.html.erb (51.6ms)
+  Rendered payments/_form.html.erb (55.5ms)
+  Rendered payments/new.html.erb within layouts/application (55.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/wizard.css?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/wizard.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-25 16:43:20 -0430

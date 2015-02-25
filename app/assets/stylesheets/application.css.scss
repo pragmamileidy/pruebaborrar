@@ -16,3 +16,66 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.head {
+    padding: 30px;
+    margin-bottom: 1px;
+    color: inherit;
+  background: rgb(206,220,231); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(206,220,231,1) 0%, rgba(89,106,114,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(206,220,231,1)), color-stop(100%,rgba(89,106,114,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%); /* IE10+ */
+  background: linear-gradient(135deg, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.content-center {
+    color: inherit;
+    padding: 15px;
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 5%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 64%, rgba(246,246,246,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(5%,rgba(225,225,225,1)), color-stop(50%,rgba(241,241,241,1)), color-stop(64%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 5%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 64%,rgba(246,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 5%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 64%,rgba(246,246,246,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 5%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 64%,rgba(246,246,246,1) 100%); /* IE10+ */
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 5%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 64%,rgba(246,246,246,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.section-footer{
+  background: rgb(216,224,222); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(216,224,222,1) 0%, rgba(130,157,152,1) 4%, rgba(174,191,188,1) 21%, rgba(153,175,171,1) 44%, rgba(142,166,162,1) 68%, rgba(78,92,90,1) 100%, rgba(14,14,14,1) 100%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(216,224,222,1)), color-stop(4%,rgba(130,157,152,1)), color-stop(21%,rgba(174,191,188,1)), color-stop(44%,rgba(153,175,171,1)), color-stop(68%,rgba(142,166,162,1)), color-stop(100%,rgba(78,92,90,1)), color-stop(100%,rgba(14,14,14,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, rgba(216,224,222,1) 0%,rgba(130,157,152,1) 4%,rgba(174,191,188,1) 21%,rgba(153,175,171,1) 44%,rgba(142,166,162,1) 68%,rgba(78,92,90,1) 100%,rgba(14,14,14,1) 100%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, rgba(216,224,222,1) 0%,rgba(130,157,152,1) 4%,rgba(174,191,188,1) 21%,rgba(153,175,171,1) 44%,rgba(142,166,162,1) 68%,rgba(78,92,90,1) 100%,rgba(14,14,14,1) 100%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, rgba(216,224,222,1) 0%,rgba(130,157,152,1) 4%,rgba(174,191,188,1) 21%,rgba(153,175,171,1) 44%,rgba(142,166,162,1) 68%,rgba(78,92,90,1) 100%,rgba(14,14,14,1) 100%,rgba(14,14,14,1) 100%); /* IE10+ */
+  background: linear-gradient(135deg, rgba(216,224,222,1) 0%,rgba(130,157,152,1) 4%,rgba(174,191,188,1) 21%,rgba(153,175,171,1) 44%,rgba(142,166,162,1) 68%,rgba(78,92,90,1) 100%,rgba(14,14,14,1) 100%,rgba(14,14,14,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    height: 180px;
+    padding-top: 5px;
+}
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+.form-center{
+   background: #c2d055 url(../assets/tarjeta_pago.jpg);
+   margin: 0 auto;
+   width: 800px;
+}
+.input-large{
+  padding-left: 150px;
+  background: #CCC;
+  opacity: 0.8;;
+  width: 600px;
+  margin: 0 auto;
+}
+.wizard {
+  background-color: #617F9D;
+}
+input[type="button"], input[type="reset"]{
+-webkit-appearance: button;
+cursor: pointer;
+background: #97B3CF;
+}

@@ -46,8 +46,6 @@ $(document).ready(function(){
           check3(this);
   });
 
-
-
 });
 
  ////////////// VALIDAR TARJETA DE CREDITO NUMERO ///////
@@ -167,6 +165,30 @@ function check3(obj) {
   document.getElementById('payment_cards_code').value = '';
  }
 
+
+ /////// validar customer ////
+
+ function verificarCliente(){
+  numero = document.getElementById("payment_customers_identification").value;
+  name = document.getElementById("payment_customers_name").value;
+  
+  params = {"numero": numero, "name" : name}
+
+  $.ajax({
+        url: "/payments/validate_customer", //controller
+        data: params,
+        dataType: "json",
+        success: function(response) {
+          console.log("RESPUESTA OBTENIDA " + response);
+          $("#payment_customer_id").val(response);
+        },
+        error: function(response) {
+          console.log("RESPUESTA OBTENIDA ERROR " + response);
+            //Do Something to handle error
+        }
+    });
+}
+
 /////// validar tarjetas ////
 
 function verificarTarjeta(){
@@ -177,20 +199,52 @@ function verificarTarjeta(){
   params = {"codigo": codigo,"numero": numero}
 
   $.ajax({
-        url: "/payments/validate_card",
+        url: "/payments/validate_card", //controller
         data: params,
         dataType: "json",
         success: function(response) {
           console.log("RESPUESTA OBTENIDA " + response);
           if(response){ 
             obtenerValores(); 
-            $('#MyWizard').wizard('next');
+            verificarCliente();
+            verificarFecha();
           }
-          else{alert("retorno null")}
+          else{alert("No se encontro la tarjeta")}
         },
         error: function(response) {
           console.log("RESPUESTA OBTENIDA ERROR " + response);
           $("#tarjeta_invalida").text("No se encontraron los datos de la tarjeta");
+            //Do Something to handle error
+        }
+    });
+}
+
+/////// validar fecha de expiracion /////
+
+function verificarFecha(){
+  mes = document.getElementById('payment_cards_date_expired_2i').value;
+  anio = document.getElementById('payment_cards_date_expired_1i').value;
+  numero = document.getElementById("payment_cards_number").value;
+  numero = CreditCard.cleanNumber(numero)
+  fecha =  "0"+mes + "/" + anio
+
+  params = {"numero": numero, "fecha": fecha}
+
+  $.ajax({
+        url: "/payments/validate_fecha", //controller
+        data: params,
+        dataType: "json",
+        success: function(response) {
+          console.log("RESPUESTA OBTENIDA " + response); 
+          if(response){ 
+           console.log("ok"); 
+           $('#MyWizard').wizard('next');
+          }
+          else{alert("FECHA INVALIDA")}
+        },
+        error: function(response) {
+          console.log("RESPUESTA OBTENIDA ERROR " + response);
+          alert("La fecha es incorrecta");
             //Do Something to handle error
         }
     });

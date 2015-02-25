@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216135414) do
+ActiveRecord::Schema.define(version: 20150225201255) do
 
   create_table "cards", force: true do |t|
     t.string   "card_type"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20141216135414) do
   end
 
   add_index "customers", ["card_id"], name: "index_customers_on_card_id"
+  add_index "customers", ["identification"], name: "index_customers_on_identification", unique: true
 
   create_table "merchants", force: true do |t|
     t.string   "username"
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20141216135414) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "payments", force: true do |t|
@@ -50,6 +52,7 @@ ActiveRecord::Schema.define(version: 20141216135414) do
     t.datetime "updated_at"
     t.integer  "merchant_id"
     t.integer  "customer_id"
+    t.string   "status"
   end
 
   add_index "payments", ["customer_id"], name: "index_payments_on_customer_id"
